@@ -1,0 +1,176 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Avenir", sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+header, section {
+	height: 100%;
+}
+
+/********************
+
+		HEADER 
+ 
+********************/
+header {
+	background-image: url(images/header.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 2em;
+}
+
+.tete {
+	width: 92%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tete .connect p {
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+}
+
+.tete .connect p:first-child {
+	margin-right: 1em;
+}
+
+header .content {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50%;
+	margin-left: 7%;
+}
+
+header .content h1 {
+	color: #fff;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+header .content h2 {
+	color: lightgray;
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+.bouton {
+	display: inline-block;
+	border: solid 1px #fff;
+	border-radius: 20px;
+	padding: 0.5em 1em;
+	cursor: pointer;
+}
+
+.bouton.inscription {
+	background-color: #fff;
+	color: cornflowerblue;
+}
+.bouton.connexion {
+	color: #fff;
+}
+
+/********************
+
+		SECTION 
+ 
+********************/
+
+@keyframes leftToRight {
+	0%, 15%, 100% {
+		left: 0px; /*1ère image*/
+	}
+	20%, 35% {
+		left: -284px; /*2ème image*/
+	}
+	40%, 55% {
+		left: -568px; /*3ème image*/
+	}
+	60%, 75% {
+		left: -852px; /*4ème image*/
+	}
+	80%, 95% {
+		left: -1136px; /*5ème image*/
+	}
+}
+
+section {
+	margin-top: 4em;
+}
+section h1 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 2em;
+	color: dimgray;
+}
+section .slider {
+	width: 284px;
+	height: 284px;
+	margin: 0 auto 2em auto;
+	overflow: hidden;
+}
+section .slider-content {
+	display: flex;
+}
+section .slider-content li {
+	display: inline;
+}
+section .slider-content img {
+	webkit-animation: leftToRight 15s linear infinite 0s;
+	animation: leftToRight 15s linear infinite 0s;
+    position: relative;
+}
+section .infos {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	font-size: 12px;
+	height: 20%;
+	color: dimgray;
+}
+section .infos div {
+	flex-basis: 25%;
+	height: 100%;
+	border-right: solid 1px orange;
+}
+section .infos div:last-child {
+	border-right: none;
+}
+section .infos p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+section .infos span {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+/********************
+
+		Bouton 
+ 
+********************/
+
+.up-page {
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	display: none;
+}
